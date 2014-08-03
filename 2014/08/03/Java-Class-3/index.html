@@ -1,0 +1,384 @@
+
+ <!DOCTYPE HTML>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+    <title>Mochabatata</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="Qianqing XU">
+    
+    <meta name="description" content="title: Java Class 3date: 2014-08-03 12:55:15tags:[Class,Java]
+categories: Programming
+Part 6 Java API
+Java 内置有数百个类，函数库
+Arraylist
+add(Object elem) 向lis">
+    
+    
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="Mochabatata" title="Mochabatata"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Mochabatata">Mochabatata</a></h1>
+				<h2 class="blog-motto">test 1</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/tags">Tags</a></li>
+					
+						<li><a href="/categories">Categories</a></li>
+					
+					<li>
+					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:xuqianqing.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2014/08/03/Java-Class-3/" title="" itemprop="url"></a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="http://xuqianqing.com" title="Qianqing XU">Qianqing XU</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2014-08-03T05:14:55.000Z" itemprop="datePublished">Aug 3 2014</time>
+    Updated:<time datetime="2014-08-03T05:14:55.000Z" itemprop="dateModified">Aug 3 2014</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#categories:_Programming"><span class="toc-number">1.</span> <span class="toc-text">categories: Programming</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Part_6_Java_API"><span class="toc-number">2.</span> <span class="toc-text">Part 6 Java API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Arraylist"><span class="toc-number">2.1.</span> <span class="toc-text">Arraylist</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ArrayList和array"><span class="toc-number">2.2.</span> <span class="toc-text">ArrayList和array</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关于API"><span class="toc-number">2.3.</span> <span class="toc-text">关于API</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Part_7_Inheritance_&_Polymorphism"><span class="toc-number">3.</span> <span class="toc-text">Part 7 Inheritance & Polymorphism</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#继承"><span class="toc-number">3.1.</span> <span class="toc-text">继承</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多态"><span class="toc-number">3.2.</span> <span class="toc-text">多态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#重载"><span class="toc-number">3.3.</span> <span class="toc-text">重载</span></a></li></ol></li></ol>
+		</div>
+		
+		<p>title: Java Class 3<br>date: 2014-08-03 12:55:15<br>tags:[Class,Java]</p>
+<h2 id="categories:_Programming">categories: Programming</h2>
+<h2 id="Part_6_Java_API">Part 6 Java API</h2>
+<p>Java 内置有数百个类，函数库</p>
+<h3 id="Arraylist">Arraylist</h3>
+<p>add(Object elem) 向list中加入对象参数<br>remove(int index) 在索引参数中移除对象<br>remove(Object elem) 移除该对象<br>contains(Object elem) 如果对象参数匹配返回true<br>isEmpty() list 中没有元素返回true<br>indexOf(Object elem) 返回对象的索引或者-1<br>size()<br>get(int index)</p>
+<h3 id="ArrayList和array">ArrayList和array</h3>
+<p>创建：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">new ArrayList&lt;String&gt;();  //ArrayList</div><div class="line">new String[<span class="number">2</span>];            //array</div></pre></td></tr></table></figure>
+
+<p>存放：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">myList.add(b);            //ArrayList</div><div class="line">myList[<span class="number">1</span>] = b;            //array</div></pre></td></tr></table></figure>
+
+<h3 id="关于API">关于API</h3>
+<p>package：java.util.ArrayList<br>import与include不同：import只是省下前面包的名字，程序不会变大变慢<br>java.lang是基础包<br>查询API：HTML API文档</p>
+<h2 id="Part_7_Inheritance_&amp;_Polymorphism">Part 7 Inheritance &amp; Polymorphism</h2>
+<p>“For better Life”</p>
+<h3 id="继承">继承</h3>
+<p>编译器不会在乎方法实际从哪个类找到的<br><strong>类关系</strong>：<br>is-a：单向结构，适用于继承<br>has-a<br><strong>如何知道子类能够继承哪些？</strong><br>通过设置access level来控制：普遍；public可继承 private不可继承<br>private &lt; default &lt; protected &lt; public<br><strong>使用情况</strong>:<br>某个类会比其父类更具有特定意义时，考虑到程序，应该被多个相同基本类型所共享是，应该考虑继承。<br><strong>意义</strong>：<br>避免了程序代码重复；定义了共同的协议<br><strong>防止某个类被做出子类</strong>：</p>
+<ol>
+<li>存取控制，非公有的类只能被同一个包的类做出子类</li>
+<li>final 不能被继承（需要安全，确保方法是你版本用final）</li>
+<li>让类只拥有private的构造程序（constructor）</li>
+</ol>
+<p><strong>遵守覆盖的规则</strong>：方法<br>参数 和 返回值 不能改变<br>不能降低方法的存取权限：只能更开放。例：public 变 private 不可行</p>
+<h3 id="多态">多态</h3>
+<p>Dog myDog = new Dog()；<br>在多态下，引用和对象是不同类型，Animal myDog = new Dog();<br>运用多态时，引用类型可以是实际对象的父类型！（is-a类型的父类都可以！）<br><strong>参数和返回值也可以多态</strong>：<br>举例：让猫叫，让狗叫 猫狗多态之后，对于animal类来说，定义makenoise(animal a)，makenoise(d)狗叫，makenoise(c)猫叫<br>程序代码为使用多态参数，即为参数声明为父类型，运行时可传入子类！<br><strong>意义</strong>：通过多态，可以编写出引进新子类是也不必修改程序。（不必修改处理实例作为参数的方程了）</p>
+<h3 id="重载">重载</h3>
+<p>方法的名称相同，但是参数不同<br>！：与多态毫无关系</p>
+<p>性质：具有扩展性，但是不满足多态合约<br>1.返回类型可以不同<br>2.不能只改变返回类型（参数必须不同）<br>3.可以更改存取权限</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+
+
+
+
+<div class="article-share" id="share">
+
+  
+<div class="jiathis_style">
+    <span class="jiathis_txt">分享到：</span>
+    <a class="jiathis_button_tsina">新浪微博</a>
+    <a class="jiathis_button_weixin">微信</a>
+    <a class="jiathis_button_twitter">Twitter</a>
+    <a class="jiathis_button_evernote">EverNote</a>
+    <a href="http://www.jiathis.com/share?uid=1501277" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+</div>
+<script type="text/javascript" >
+    var jiathis_config={
+    data_track_clickback:true,
+    sm:"copy,renren,cqq",
+    pic:"",
+    summary:"",
+    
+  </script> 
+<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=
+" charset="utf-8"></script>      
+
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2014/08/03/Java-Class-2/"  title="Java Class 2">
+ <strong>NEXT:</strong><br/> 
+ <span>Java Class 2
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section class="comment">
+	<div class="ds-thread"></div>
+</section>
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#categories:_Programming"><span class="toc-number">1.</span> <span class="toc-text">categories: Programming</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Part_6_Java_API"><span class="toc-number">2.</span> <span class="toc-text">Part 6 Java API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Arraylist"><span class="toc-number">2.1.</span> <span class="toc-text">Arraylist</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ArrayList和array"><span class="toc-number">2.2.</span> <span class="toc-text">ArrayList和array</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关于API"><span class="toc-number">2.3.</span> <span class="toc-text">关于API</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Part_7_Inheritance_&_Polymorphism"><span class="toc-number">3.</span> <span class="toc-text">Part 7 Inheritance & Polymorphism</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#继承"><span class="toc-number">3.1.</span> <span class="toc-text">继承</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多态"><span class="toc-number">3.2.</span> <span class="toc-text">多态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#重载"><span class="toc-number">3.3.</span> <span class="toc-text">重载</span></a></li></ol></li></ol>
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">Categories</p>
+		<ul>
+		
+			<li><a href="/categories/Hexo-Blog/" title="Hexo Blog">Hexo Blog<sup>1</sup></a></li>
+		
+			<li><a href="/categories/Programming/" title="Programming">Programming<sup>2</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/Class/" title="Class">Class<sup>2</sup></a></li>
+		
+			<li><a href="/tags/Java/" title="Java">Java<sup>2</sup></a></li>
+		
+			<li><a href="/tags/debug/" title="debug">debug<sup>1</sup></a></li>
+		
+			<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
+		
+			<li><a href="/tags/solved/" title="solved">solved<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  <div class="rsspart">
+	<a href="null" target="_blank" title="rss">RSS</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hi! I&#39;m coding in SU now. <br/>
+			I&#39;ll share my new ideas and process of learning Algorithm and Web development here.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/u/2168803434## e.g. 436062867 for http://weibo.com/436062867" target="_blank" title="weibo"></a>
+		
+		
+		
+		<a href="https://github.com/mochabatata## e.g. A-limon for https://github.com/A-limon" target="_blank" title="github"></a>
+		
+		
+		<a href="https://www.facebook.com/Xuqianqing## e.g. yangjian for https://favebook.com/yangjian" target="_blank" title="facebook"></a>
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://zespia.tw/hexo/" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2014 
+		
+		<a href="http://xuqianqing.com" target="_blank" title="Qianqing XU">Qianqing XU</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"null"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+  </body>
+</html>
