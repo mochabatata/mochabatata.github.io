@@ -151,33 +151,33 @@
 
   <section class="post">
     <h2 id="Part_6_Java_API">Part 6 Java API</h2>
-<p>Java 内置有数百个类，函数库</p>
+<p>Java contains hondreds of libraries and methods</p>
 <h3 id="Arraylist">Arraylist</h3>
-<p>add(Object elem) 向list中加入对象参数<br>remove(int index) 在索引参数中移除对象<br>remove(Object elem) 移除该对象<br>contains(Object elem) 如果对象参数匹配返回true<br>isEmpty() list 中没有元素返回true<br>indexOf(Object elem) 返回对象的索引或者-1<br>size()<br>get(int index)</p>
-<h3 id="ArrayList和array">ArrayList和array</h3>
-<p>创建：</p>
+<p>add(Object elem)<br>remove(int index)<br>remove(Object elem)<br>contains(Object elem) //true if contains<br>isEmpty() list<br>indexOf(Object elem) // -1 id no elements<br>size()<br>get(int index)</p>
+<h3 id="ArrayList_and_array">ArrayList and array</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">new ArrayList&lt;String&gt;();  //ArrayList</div><div class="line">new String[<span class="number">2</span>];            //array</div></pre></td></tr></table></figure>
 
-<p>存放：</p>
+
+
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">myList.add(b);            //ArrayList</div><div class="line">myList[<span class="number">1</span>] = b;            //array</div></pre></td></tr></table></figure>
 
-<h3 id="关于API">关于API</h3>
-<p>package：java.util.ArrayList<br>import与include不同：import只是省下前面包的名字，程序不会变大变慢<br>java.lang是基础包<br>查询API：HTML API文档</p>
+<h3 id="About_API">About API</h3>
+<p>package：java.util.ArrayList<br>Difference between import and include：”import” ellipsised the front packages’ names<br>Inquire API：HTML API documents</p>
 <h2 id="Part_7_Inheritance_&amp;_Polymorphism">Part 7 Inheritance &amp; Polymorphism</h2>
 <p>“For better Life”</p>
-<h3 id="继承">继承</h3>
-<p>编译器不会在乎方法实际从哪个类找到的<br><strong>类关系</strong>：<br>is-a：单向结构，适用于继承<br>has-a<br><strong>如何知道子类能够继承哪些？</strong><br>通过设置access level来控制：普遍；public可继承 private不可继承<br>private &lt; default &lt; protected &lt; public<br><strong>使用情况</strong>:<br>某个类会比其父类更具有特定意义时，考虑到程序，应该被多个相同基本类型所共享是，应该考虑继承。<br><strong>意义</strong>：<br>避免了程序代码重复；定义了共同的协议<br><strong>防止某个类被做出子类</strong>：</p>
+<h3 id="Inheritance">Inheritance</h3>
+<p>Jvm doesn’t care about which class the method comes from.<br><strong>Relationship between classes</strong>：<br>is-a : one way, suitable for inheritance<br>has-a : contains<br><strong>Access lecel</strong><br>public-yes, private-no<br>private &lt; default &lt; protected &lt; public<br><strong>Meaning</strong>：<br>Reduce redundancy; Same protocol<br><strong>Prohibits inheritance</strong>：</p>
 <ol>
-<li>存取控制，非公有的类只能被同一个包的类做出子类</li>
-<li>final 不能被继承（需要安全，确保方法是你版本用final）</li>
-<li>让类只拥有private的构造程序（constructor）</li>
+<li>One package’s class only can be inherited by the same package’s classes</li>
+<li>final keyword</li>
+<li>private</li>
 </ol>
-<p><strong>遵守覆盖的规则</strong>：方法<br>参数 和 返回值 不能改变<br>不能降低方法的存取权限：只能更开放。例：public 变 private 不可行</p>
-<h3 id="多态">多态</h3>
-<p>Dog myDog = new Dog()；<br>在多态下，引用和对象是不同类型，Animal myDog = new Dog();<br>运用多态时，引用类型可以是实际对象的父类型！（is-a类型的父类都可以！）<br><strong>参数和返回值也可以多态</strong>：<br>举例：让猫叫，让狗叫 猫狗多态之后，对于animal类来说，定义makenoise(animal a)，makenoise(d)狗叫，makenoise(c)猫叫<br>程序代码为使用多态参数，即为参数声明为父类型，运行时可传入子类！<br><strong>意义</strong>：通过多态，可以编写出引进新子类是也不必修改程序。（不必修改处理实例作为参数的方程了）</p>
-<h3 id="重载">重载</h3>
-<p>方法的名称相同，但是参数不同<br>！：与多态毫无关系</p>
-<p>性质：具有扩展性，但是不满足多态合约<br>1.返回类型可以不同<br>2.不能只改变返回类型（参数必须不同）<br>3.可以更改存取权限</p>
+<p><strong>Overriding</strong>: method<br>Can not change parameters and the return type.<br>public cannot be changes to private.</p>
+<h3 id="Polymorphism">Polymorphism</h3>
+<p>Dog myDog = new Dog();<br>Animal myDog = new Dog();<br>Aninal is parent class of Dog<br><strong>Parameters’  and return type’s Polymorphism</strong>：<br>Eg:makenoise(animal a)<br>makenoise(d)<br>makenoise(c)！<br><strong>Meaning</strong>：Via polymorphism, adding new child class don’t need to change parent class codes.</p>
+<h3 id="Overloading">Overloading</h3>
+<p>Same method name, but different parameters<br>! Nothing to do with Polymorphism</p>
+<p>Properity: extension<br>Different return type and differnt parameters both</p>
 
   </section>
 

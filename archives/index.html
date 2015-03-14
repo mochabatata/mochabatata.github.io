@@ -147,10 +147,10 @@
       <p class="excerpt">
     
       Part 6 Java API
-Java 内置有数百个类，函数库
+Java contains hondreds of libraries and methods
 Arraylist
-add(Object elem) 向list中加入对象参数remove(int index) 在索引参数中移除对象remove(Object elem) 移除该对象contains(Object elem) 如果对象参数匹配返回trueisEmpty() list 中没有元素返回trueindexOf(Object elem) 返回对象的索引或者-1size()get(int index)
-ArrayList和
+add(Object elem)remove(int index)remove(Object elem)contains(Object elem) //true if containsisEmpty() listindexOf(Object elem) // -1 id no elementssize()get(int index)
+ArrayLis
     &hellip;
       </p>
       <div class="post-list__meta"><time datetime="2014-08-03T16:55:15.000Z" class="post-list__meta--date date">Aug 3 2014</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
@@ -165,17 +165,10 @@ ArrayList和
       <p class="excerpt">
     
       Part 3 Variables
-分类:
-1.primitive主数据类型：boolean char | byte short int long | float double2.引用
-对象变量：
-实际上没有对象变量存在，只有引用（reference）到对象的变量，它不是对象的容器，类似指针，地址。举例：
-12Dog d = new Dog();d.bark();
-
-d相当于遥控器，”.”相当于遥控器上的按钮。
-对象的声明、创建和赋值：
-1Dog d = new Dog();
-
-Dog d  ——
+Primitive Data type:
+boolean char | byte short int long | float double
+Objext Variables:
+Actually, there is no Objext Variables. It means the variable referenced to object. It is not a container, and it’s like pointer and address.Exa
     &hellip;
       </p>
       <div class="post-list__meta"><time datetime="2014-08-03T16:30:27.000Z" class="post-list__meta--date date">Aug 3 2014</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
@@ -192,13 +185,12 @@ Dog d  ——
       Part 1 Basic
 About Java:
 Java: Write-once/run-anywhere
-关于环境：
-IDE (Integrated Development Environment)SDK (Software Development Environment)Mac OS X 包含Java SDK 
-编译运行：
+About Environment:
+IDE (Integrated Development Environment)SDK (Software Development Environment)Mac OS X internally installed Java SDK 
+Compile and run:
 
-编写源代码，存为.java的文件
-javac来编译.java的文件，如果没错便生成.class的文件
-启动JVM（Java虚拟机）来运行.class 的文件。启动时，
+.java as file name
+javac compiles .java 
     &hellip;
       </p>
       <div class="post-list__meta"><time datetime="2014-08-01T20:05:45.000Z" class="post-list__meta--date date">Aug 1 2014</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
@@ -212,21 +204,10 @@ javac来编译.java的文件，如果没错便生成.class的文件
       <h2 class="post-list__post-title post-title"><a href="/2014/07/18/Hexo_clean/" title="link to post.title">Hexo_clean</a></h2>
       <p class="excerpt">
     
-      问题：
-在调试上传的时候，发现本地测试正常，上传github之后，网页显示界面混乱。
-Question:
-When I upload my local debuged files, the webpage shows uncorrectly. However, it works well on local server. 
-解决：
-1$ hexo g
-
-
- 之前，请使用 
-1$ hexo clean
-
-
- 清除之前缓存内的内容。
+      Question:
+When I deploy the website I created，it shows errors in layout. However, it shows what I expect correctly in local server. 
 Answer:
-Please use command ‘$ hex
+Please use command ‘$ hexo clean’ before ‘$ hexo g’.‘hexo clean’ can clean cache files which affect the new l
     &hellip;
       </p>
       <div class="post-list__meta"><time datetime="2014-07-18T04:36:56.000Z" class="post-list__meta--date date">Jul 18 2014</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;

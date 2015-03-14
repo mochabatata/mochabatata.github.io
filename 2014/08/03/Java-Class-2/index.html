@@ -151,45 +151,42 @@
 
   <section class="post">
     <h2 id="Part_3_Variables">Part 3 Variables</h2>
-<h3 id="分类:">分类:</h3>
-<p>1.primitive主数据类型：boolean char | byte short int long | float double<br>2.引用</p>
-<h3 id="对象变量：">对象变量：</h3>
-<p>实际上没有对象变量存在，只有引用（reference）到对象的变量，它不是对象的容器，类似指针，地址。<br><strong>举例</strong>：</p>
+<h3 id="Primitive_Data_type:">Primitive Data type:</h3>
+<p>boolean char | byte short int long | float double</p>
+<h3 id="Objext_Variables:">Objext Variables:</h3>
+<p>Actually, there is no Objext Variables. It means the variable referenced to object. It is not a container, and it’s like pointer and address.<br><strong>Example</strong>：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Dog d = new Dog();</div><div class="line">d.bark();</div></pre></td></tr></table></figure>
 
-<p>d相当于遥控器，”.”相当于遥控器上的按钮。</p>
-<h3 id="对象的声明、创建和赋值：">对象的声明、创建和赋值：</h3>
+<p>d is like a remote, “.” is like a button on the remote.</p>
+<h3 id="Declaration,_creation_and_assignment_of_object">Declaration, creation and assignment of object</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Dog d = new Dog();</div></pre></td></tr></table></figure>
 
-<p>Dog d  ——要求jvm分配空间给应用变量，命名为d，变量永远为 Dog类型<br>new Dog() ——要求jam分配堆空间给新建的dog对象<br>= —— 把新的Dog赋值给d这个引用变量</p>
-<h3 id="数组：">数组：</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">int[] nums;         //声明</div><div class="line">nums = new int[<span class="number">7</span>];  //创建</div></pre></td></tr></table></figure>
+<p>Dog d  ——require jvm to allocate space to variable named d, and the type of d is Dog.<br>new Dog() ——require JVM allocate stack space to the new object.<br>= assign operator</p>
+<h3 id="Array：">Array：</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">int[] nums;         //delaration</div><div class="line">nums = new int[<span class="number">7</span>];  //create</div></pre></td></tr></table></figure>
 
-<h3 id="对象数组：">对象数组：</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Dog [] pets;        //建了一个叫pets的遥控器</div><div class="line">pets = new Dog[<span class="number">7</span>];  //指定遥控器的对象</div><div class="line">Dog[<span class="number">0</span>] = new Dog();</div></pre></td></tr></table></figure>
+<h3 id="Array_object：">Array object：</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Dog [] pets;        //create a remote called pets</div><div class="line">pets = new Dog[<span class="number">7</span>];  //define the object the remote pointed to</div><div class="line">Dog[<span class="number">0</span>] = new Dog();</div></pre></td></tr></table></figure>
 
 <h2 id="Part_4_Method">Part 4 Method</h2>
-<h3 id="类的内容：">类的内容：</h3>
-<p>对象知道什么和执行什么！</p>
-<h3 id="传参：">传参：</h3>
-<p>实参（argument） 形参（parameter）返回值</p>
-<h3 id="封装：">封装：</h3>
-<p>get：返回实例变量的值<br>set：取用一个参数来设定实例变量的值<br>暴露：可利用原点运算符存取 dog.age = 2;<br>需要创建setter这个方法给所有的变量值，强制通过setter来设定变量<br>setter中可以加类似的过滤器<br>变量变为私有，getter和setter设为共有。</p>
+<h3 id="Content_of_class：">Content of class：</h3>
+<p>What object knows and executes</p>
+<h3 id="Passing：">Passing：</h3>
+<p>Argument  Parameter  Return value</p>
+<h3 id="Capsulation：">Capsulation：</h3>
+<p>get(), set()<br>dog.age = 2; Create setter to age, and use setter to set value to age.<br>Tis: And filter in setter is nice way to restrict the value of variable.<br>Variable is private, and setter and getter are public.</p>
 <h2 id="Part_5_Programming">Part 5 Programming</h2>
-<h3 id="高层设计：">高层设计：</h3>
-<p>需要类和方法，切记：以OO的方式思考，专注于出现的事物而不是过程</p>
-<h3 id="开发类：">开发类：</h3>
+<h3 id="High_level_design：">High level design：</h3>
+<p>Remember：Think in the way of Object Oriented，and focus on end, not process.</p>
+<h3 id="Class_development：">Class development：</h3>
 <ol>
-<li>找出类应该做的事情</li>
-<li>列出实例和方法</li>
-<li>列出代码的伪码：实例变量声明 方法声明 方法逻辑（发生什么事）</li>
-<li>编写方法的测试用程序：帮助你了解被测程序应该做哪些事情</li>
-<li>实现类</li>
-<li>测试方法</li>
-<li>debug &amp; redesign</li>
+<li>What this class should do</li>
+<li>List variables and Methods</li>
+<li>Write pseudocode：Declaration of variables, methods and logic of methods</li>
+<li>Test methods of methods: help you know and debug.</li>
+<li>Implement the class</li>
+<li>Debug &amp; redesign</li>
 </ol>
-<h3 id="类型转换：">类型转换：</h3>
-<p>String 转为int：int guess = Interger.parseInt(someString)；<br>强制装换：int x = (int) someLongType</p>
 
   </section>
 
