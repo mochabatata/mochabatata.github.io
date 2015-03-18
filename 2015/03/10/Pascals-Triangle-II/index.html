@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>Java Class 2 | Qianqing Xu</title>
+    <title>Pascal&#39;s Triangle II | Qianqing Xu</title>
     <meta name="renderer" content="webkit">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -15,11 +15,11 @@
     <meta name="description" content="test_des">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Java Class 2 | Qianqing Xu">
+    <meta name="twitter:title" content="Pascal&#39;s Triangle II | Qianqing Xu">
     <meta name="twitter:description" content="test_des"">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Java Class 2 | Qianqing Xu">
+    <meta property="og:title" content="Pascal&#39;s Triangle II | Qianqing Xu">
     <meta property="og:description" content="test_des"">
 
   
@@ -37,7 +37,7 @@
     <meta name="generator" content="hexo" />
     
     
-    <link rel="canonical" href="http://xuqianqing.com/2014/08/03/Java-Class-2/" />
+    <link rel="canonical" href="http://xuqianqing.com/2015/03/10/Pascals-Triangle-II/" />
 
     
 </head>
@@ -141,52 +141,23 @@
 
   <header class="post-header">
     <div class="post-meta">
-      <time datetime="2014-08-03T16:30:27.000Z" class="post-list__meta--date date">Aug 3 2014</time> &#8226; <span class="post-meta__tags tags">--&nbsp;
-  <a class="-link" href="/tags/Class/">Class</a>, <a class="-link" href="/tags/Java/">Java</a>
+      <time datetime="2015-03-10T21:44:29.000Z" class="post-list__meta--date date">Mar 10 2015</time> &#8226; <span class="post-meta__tags tags">--&nbsp;
+  <a class="-link" href="/tags/Array/">Array</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/Rec/">Rec</a>
 </span>
       <!--<span class="post-meta__author author"><img src="{{author.image}}" alt="profile image for {{author.name}}" class="avatar post-meta__avatar" /> by {{author.name}}</span>-->
     </div>
-    <h1 class="post-title">Java Class 2</h1>
+    <h1 class="post-title">Pascal&#39;s Triangle II</h1>
   </header>
 
   <section class="post">
-    <h2 id="Part_3_Variables">Part 3 Variables</h2>
-<h3 id="Primitive_Data_type:">Primitive Data type:</h3>
-<p>boolean char | byte short int long | float double</p>
-<h3 id="Objext_Variables:">Objext Variables:</h3>
-<p>Actually, there is no Objext Variables. It means the variable referenced to object. It is not a container, and it’s like pointer and address.<br><strong>Example</strong>:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Dog d = new Dog();</div><div class="line">d.bark();</div></pre></td></tr></table></figure>
+    <h3 id="Thinking_and_Analysis:">Thinking and Analysis:</h3>
+<p><strong>Pascal’s Triangle</strong>: </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">    <span class="number">1</span></div><div class="line">   <span class="number">1</span> <span class="number">1</span></div><div class="line">  <span class="number">1</span> <span class="number">2</span> <span class="number">1</span></div><div class="line"> <span class="number">1</span> <span class="number">3</span> <span class="number">3</span> <span class="number">1</span></div><div class="line"><span class="number">1</span> <span class="number">4</span> <span class="number">6</span> <span class="number">4</span> <span class="number">1</span></div><div class="line"><span class="keyword">...</span></div></pre></td></tr></table></figure>
 
-<p>d is like a remote, “.” is like a button on the remote.</p>
-<h3 id="Declaration,_creation_and_assignment_of_object">Declaration, creation and assignment of object</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Dog d = new Dog();</div></pre></td></tr></table></figure>
+<p>Each level is constructed based on its higher level.<br>I use <strong>recursion</strong> to solve this from top to bottum of triangle.<br><strong>Runtime</strong>: 3 ms (Leetcode test)</p>
+<h3 id="Codes:">Codes:</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">class <span class="type">Solution</span> {</div><div class="line">    public:</div><div class="line">        vector&lt;<span class="type">int</span>&gt; getRow(<span class="type">int</span> rowIndex) {</div><div class="line">            vector&lt;<span class="type">int</span>&gt; <span class="literal">result</span>;</div><div class="line">            <span class="literal">result</span>.push_back(<span class="number">1</span>);</div><div class="line">            <span class="keyword">if</span>(rowIndex &lt;= <span class="number">0</span>)</div><div class="line">                <span class="keyword">return</span> <span class="literal">result</span>;</div><div class="line">            vector&lt;<span class="type">int</span>&gt; tmp = getRow(rowIndex -<span class="number">1</span>);</div><div class="line">            <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>; i&lt;rowIndex; i++){</div><div class="line">                <span class="type">int</span> num = tmp[i-<span class="number">1</span>] + tmp[i];</div><div class="line">                <span class="literal">result</span>.push_back(num);</div><div class="line">            }</div><div class="line">            <span class="literal">result</span>.push_back(<span class="number">1</span>);</div><div class="line">            <span class="keyword">return</span> <span class="literal">result</span>;</div><div class="line">        }</div><div class="line">};</div></pre></td></tr></table></figure>
 
-<p>Dog d  ——require jvm to allocate space to variable named d, and the type of d is Dog.<br>new Dog() ——require JVM allocate stack space to the new object.<br>= assign operator</p>
-<h3 id="Array:">Array:</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">int[] nums;         //delaration</div><div class="line">nums = new int[<span class="number">7</span>];  //create</div></pre></td></tr></table></figure>
-
-<h3 id="Array_object:">Array object:</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Dog [] pets;        //create a remote called pets</div><div class="line">pets = new Dog[<span class="number">7</span>];  //define the object the remote pointed to</div><div class="line">Dog[<span class="number">0</span>] = new Dog();</div></pre></td></tr></table></figure>
-
-<h2 id="Part_4_Method">Part 4 Method</h2>
-<h3 id="Content_of_class:">Content of class:</h3>
-<p>What object knows and executes</p>
-<h3 id="Passing:">Passing:</h3>
-<p>Argument  Parameter  Return value</p>
-<h3 id="Capsulation:">Capsulation:</h3>
-<p>get(), set()<br>dog.age = 2; Create setter to age, and use setter to set value to age.<br>Tis: And filter in setter is nice way to restrict the value of variable.<br>Variable is private, and setter and getter are public.</p>
-<h2 id="Part_5_Programming">Part 5 Programming</h2>
-<h3 id="High_level_design:">High level design:</h3>
-<p>Remember: Think in the way of Object Oriented，and focus on end, not process.</p>
-<h3 id="Class_development:">Class development:</h3>
-<ol>
-<li>What this class should do</li>
-<li>List variables and Methods</li>
-<li>Write pseudocode：Declaration of variables, methods and logic of methods</li>
-<li>Test methods of methods: help you know and debug.</li>
-<li>Implement the class</li>
-<li>Debug &amp; redesign</li>
-</ol>
 
   </section>
 
