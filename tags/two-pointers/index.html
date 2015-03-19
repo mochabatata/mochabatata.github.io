@@ -143,37 +143,33 @@
   
     
     <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/03/18/Generate-Parentheses/" title="link to post.title">Generate Parentheses</a></h2>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/18/3Sum-Closest/" title="link to post.title">3Sum Closest</a></h2>
       <p class="excerpt">
     
       Thinking and Analysis:
-The pairs of parentheses, is same like linked-list and binary tree, and you should think of recursion first.When add a new “(“, it means the chance of adding “(“ -1 and the chance of adding “)” +1.Runtime: 2 ms (Leetcode test)
-
+Similar with Two Sum, use min_gap instead of a certain number.Runtime: 51 ms (Leetcode test)
+Codes:
+12345678910111213141516171819202122232425class Solution {public:    int threeSumClosest(vector&amp;lt;int&amp;gt;&amp; num, int target) {  
     &hellip;
       </p>
-      <div class="post-list__meta"><time datetime="2015-03-19T03:00:22.000Z" class="post-list__meta--date date">Mar 18 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
-  <a class="-link" href="/tags/BackTracking/">BackTracking</a>, <a class="-link" href="/tags/LeetCode/">LeetCode</a>, <a class="-link" href="/tags/Rec/">Rec</a>, <a class="-link" href="/tags/String/">String</a>
-</span><a class="btn-border-small" href="/2015/03/18/Generate-Parentheses/">Read More</a></div>
+      <div class="post-list__meta"><time datetime="2015-03-19T01:50:48.000Z" class="post-list__meta--date date">Mar 18 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/LeetCode/">LeetCode</a>, <a class="-link" href="/tags/two-pointers/">two pointers</a>
+</span><a class="btn-border-small" href="/2015/03/18/3Sum-Closest/">Read More</a></div>
       <hr class="post-list__divider" />
     </li>
   
     
     <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/03/10/Pascals-Triangle-II/" title="link to post.title">Pascal&#39;s Triangle II</a></h2>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/18/3Sum/" title="link to post.title">3Sum</a></h2>
       <p class="excerpt">
     
       Thinking and Analysis:
-Pascal’s Triangle: 
-123456    1   1 1  1 2 1 1 3 3 11 4 6 4 1...
-
-Each level is constructed based on its higher level.I use recursion to solve this from top to bottum of triangle.Runtime: 3 ms (Leetcode test)
-Codes:
-12345678910
+Use the solution2 in Two Sum.For k-sum, the inner loop use two pointers finish the task. And there would be k-2 loops.O(max{nlogn,n^(k-1)})For this problem, use the basic solution would be time-out. So optimize it in a serie of
     &hellip;
       </p>
-      <div class="post-list__meta"><time datetime="2015-03-10T21:44:29.000Z" class="post-list__meta--date date">Mar 10 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
-  <a class="-link" href="/tags/Array/">Array</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/Rec/">Rec</a>
-</span><a class="btn-border-small" href="/2015/03/10/Pascals-Triangle-II/">Read More</a></div>
+      <div class="post-list__meta"><time datetime="2015-03-18T22:20:10.000Z" class="post-list__meta--date date">Mar 18 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/LeetCode/">LeetCode</a>, <a class="-link" href="/tags/two-pointers/">two pointers</a>
+</span><a class="btn-border-small" href="/2015/03/18/3Sum/">Read More</a></div>
       <hr class="post-list__divider" />
     </li>
   

@@ -143,6 +143,106 @@
   
     
     <li>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/18/Two-Sum/" title="link to post.title">Two Sum</a></h2>
+      <p class="excerpt">
+    
+      Thinking and Analysis:
+Solution1: Brute force, O(n^2)
+Solution2: Sort - O(nlogn)) and then use two pointers to let them move from head and tail to middle - O(n).
+Solution3: Hash. Using a map to store the vector’s value and let them equal to their ind
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2015-03-18T23:20:31.000Z" class="post-list__meta--date date">Mar 18 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/HashTable/">HashTable</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/Map/">Map</a>
+</span><a class="btn-border-small" href="/2015/03/18/Two-Sum/">Read More</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/18/Single-Number/" title="link to post.title">Single Number</a></h2>
+      <p class="excerpt">
+    
+      Thinking and Analysis:
+XOR:010^100=110  10101^00000=10101As the example shown above, every two same numbers XOR =&amp;gt; 0, and any number XOR 0 is itself.
+Codes:
+123456789class Solution {public:    int singleNumber(int A[], int n) {        int x = 0;  
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2015-03-18T22:12:45.000Z" class="post-list__meta--date date">Mar 18 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>
+</span><a class="btn-border-small" href="/2015/03/18/Single-Number/">Read More</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/18/Single-Number-II/" title="link to post.title">Single Number II</a></h2>
+      <p class="excerpt">
+    
+      Thinking and Analysis:
+Partition the number into a 32 bits array. Count the “1” numbers and num%3, if get 0 then keep 0, if get 1 then keep 1 at that position.Runtime: 10 ms (Leetcode test)
+Codes:
+1234567891011121314151617181920class Solution {public
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2015-03-18T21:37:16.000Z" class="post-list__meta--date date">Mar 18 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>
+</span><a class="btn-border-small" href="/2015/03/18/Single-Number-II/">Read More</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/18/Longest-Substring-Without-Repeating-Characters/" title="link to post.title">Longest Substring Without Repeating Characters</a></h2>
+      <p class="excerpt">
+    
+      Thinking and Analysis:
+ASCII includes definitions for 128 characters: 33 are non-printing control characters (many now obsolete) that affect how text and space are processed and 95 printable characters, including the space (which is considered an inv
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2015-03-18T18:52:07.000Z" class="post-list__meta--date date">Mar 18 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/Greedy/">Greedy</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/String/">String</a>
+</span><a class="btn-border-small" href="/2015/03/18/Longest-Substring-Without-Repeating-Characters/">Read More</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/18/Count-and-Say/" title="link to post.title">Count and Say</a></h2>
+      <p class="excerpt">
+    
+      Thinking and Analysis:
+The count-and-say sequence:1 -&amp;gt; 11 -&amp;gt; 21 -&amp;gt; 1211 -&amp;gt; 111221 …Count the same digit in the sequence and append the digit itself.Runtime: 4 ms (Leetcode test)
+Codes:
+1234567891011121314151617181920212223class Solution {
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2015-03-18T18:26:52.000Z" class="post-list__meta--date date">Mar 18 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/String/">String</a>
+</span><a class="btn-border-small" href="/2015/03/18/Count-and-Say/">Read More</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/18/Length-of-Last-Word/" title="link to post.title">Length of Last Word</a></h2>
+      <p class="excerpt">
+    
+      Thinking and Analysis:
+Loop from tail to head. Set a bool flag to indicate whether meet “ “ or not.Runtime: 6 ms (Leetcode test)
+Codes:
+1234567891011121314151617class Solution {public:    int lengthOfLastWord(const char *s) {        int num = 0;     
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2015-03-18T17:50:41.000Z" class="post-list__meta--date date">Mar 18 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/String/">String</a>
+</span><a class="btn-border-small" href="/2015/03/18/Length-of-Last-Word/">Read More</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
       <h2 class="post-list__post-title post-title"><a href="/2015/03/18/Longest-Common-Prefix/" title="link to post.title">Longest Common Prefix</a></h2>
       <p class="excerpt">
     
