@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>Qianqing Xu</title>
+    <title>Palindrome Partitioning | Qianqing Xu</title>
     <meta name="renderer" content="webkit">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -15,11 +15,11 @@
     <meta name="description" content="test_des">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Qianqing Xu">
+    <meta name="twitter:title" content="Palindrome Partitioning | Qianqing Xu">
     <meta name="twitter:description" content="test_des"">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Qianqing Xu">
+    <meta property="og:title" content="Palindrome Partitioning | Qianqing Xu">
     <meta property="og:description" content="test_des"">
 
   
@@ -37,7 +37,7 @@
     <meta name="generator" content="hexo" />
     
     
-    <link rel="canonical" href="http://xuqianqing.com" />
+    <link rel="canonical" href="http://xuqianqing.com/2015/03/23/Palindrome-Partitioning/" />
 
     
 </head>
@@ -137,67 +137,28 @@
 
     <div class="content-wrapper">
         <div class="content-wrapper__inner">
-            <div class="main-post-list">
-    
-  <ol class="post-list">
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/03/23/Palindrome-Partitioning/" title="link to post.title">Palindrome Partitioning</a></h2>
-      <p class="excerpt">
-    
-      Thinking and Analysis:
-Use dfs to traverse the array from every start charactors.All path -&amp;gt; vector&amp;gt; to store result, and use vector&amp;lt;&amp;gt; path to store every suitable substring -&amp;gt; start index is the key to extend the status -&amp;gt; no need 
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2015-03-23T19:30:23.000Z" class="post-list__meta--date date">Mar 23 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+            <article class="post-container post-container--single">
+
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2015-03-23T19:30:23.000Z" class="post-list__meta--date date">Mar 23 2015</time> &#8226; <span class="post-meta__tags tags">--&nbsp;
   <a class="-link" href="/tags/DFS/">DFS</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/Rec/">Rec</a>
-</span><a class="btn-border-small" href="/2015/03/23/Palindrome-Partitioning/">Read More</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/03/18/Generate-Parentheses/" title="link to post.title">Generate Parentheses</a></h2>
-      <p class="excerpt">
-    
-      Thinking and Analysis:
-The pairs of parentheses, is same like linked-list and binary tree, and you should think of recursion first.When add a new “(“, it means the chance of adding “(“ -1 and the chance of adding “)” +1.Runtime: 2 ms (Leetcode test)
+</span>
+      <!--<span class="post-meta__author author"><img src="{{author.image}}" alt="profile image for {{author.name}}" class="avatar post-meta__avatar" /> by {{author.name}}</span>-->
+    </div>
+    <h1 class="post-title">Palindrome Partitioning</h1>
+  </header>
 
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2015-03-19T03:00:22.000Z" class="post-list__meta--date date">Mar 18 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
-  <a class="-link" href="/tags/BackTracking/">BackTracking</a>, <a class="-link" href="/tags/LeetCode/">LeetCode</a>, <a class="-link" href="/tags/Rec/">Rec</a>, <a class="-link" href="/tags/String/">String</a>
-</span><a class="btn-border-small" href="/2015/03/18/Generate-Parentheses/">Read More</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/03/10/Pascals-Triangle-II/" title="link to post.title">Pascal&#39;s Triangle II</a></h2>
-      <p class="excerpt">
-    
-      Thinking and Analysis:
-Pascal’s Triangle: 
-123456    1   1 1  1 2 1 1 3 3 11 4 6 4 1...
-
-Each level is constructed based on its higher level.I use recursion to solve this from top to bottum of triangle.Runtime: 3 ms (Leetcode test)
-Codes:
-12345678910
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2015-03-10T21:44:29.000Z" class="post-list__meta--date date">Mar 10 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
-  <a class="-link" href="/tags/Array/">Array</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/Rec/">Rec</a>
-</span><a class="btn-border-small" href="/2015/03/10/Pascals-Triangle-II/">Read More</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-  </ol>
+  <section class="post">
+    <h3 id="Thinking_and_Analysis:">Thinking and Analysis:</h3>
+<p>Use dfs to traverse the array from every start charactors.<br>All path -&gt; vector<vector<>&gt; to store result, and use vector&lt;&gt; path to store every suitable substring -&gt; start index is the key to extend the status -&gt; no need to judge repetition -&gt; convergence when all string is traversed -&gt; path[].pop_back is the way to recover<br>T: O(n^2) S: O(1)<br><strong>Runtime</strong>: 16 ms (Leetcode test)</vector<></p>
+<h3 id="Codes:">Codes:</h3>
+<figure class="highlight class"><figcaption><span>Solution {</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">public:</div><div class="line">    vector&lt;vector&lt;<span class="type">string</span>&gt;&gt; partition(<span class="type">string</span> s) {</div><div class="line">        vector&lt;vector&lt;<span class="type">string</span>&gt;&gt; <span class="literal">result</span>;</div><div class="line">        vector&lt;<span class="type">string</span>&gt; path;</div><div class="line">        dfs(s, path, <span class="literal">result</span>, <span class="number">0</span>);</div><div class="line">        <span class="keyword">return</span> <span class="literal">result</span>;</div><div class="line">    }</div><div class="line">    <span class="type">void</span> dfs(<span class="type">string</span> &s, vector&lt;<span class="type">string</span>&gt; &path, vector&lt;vector&lt;<span class="type">string</span>&gt;&gt; &<span class="literal">result</span>, <span class="type">int</span> start){</div><div class="line">        <span class="keyword">if</span>(start == s.size()){</div><div class="line">            <span class="literal">result</span>.push_back(path);</div><div class="line">            <span class="keyword">return</span>;</div><div class="line">        }</div><div class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = start; i&lt;s.size();i++)</div><div class="line">        {</div><div class="line">            <span class="keyword">if</span>(isPalindrome(s,start,i)){</div><div class="line">                path.push_back(s.substr(start, i-start+<span class="number">1</span>));</div><div class="line">                dfs(s, path, <span class="literal">result</span>,i+<span class="number">1</span>);</div><div class="line">                path.pop_back();</div><div class="line">            }</div><div class="line">        }</div><div class="line">    }</div><div class="line">    <span class="type">bool</span> isPalindrome(<span class="keyword">const</span> <span class="type">string</span> &s, <span class="type">int</span> start, <span class="type">int</span> <span class="keyword">end</span>)</div><div class="line">    {</div><div class="line">        <span class="keyword">while</span>(s[start] == s[<span class="keyword">end</span>])</div><div class="line">        {</div><div class="line">            ++start;</div><div class="line">            --<span class="keyword">end</span>;</div><div class="line">        }</div><div class="line">        <span class="keyword">return</span> start &gt;= <span class="keyword">end</span>;</div><div class="line">    }</div><div class="line">};</div></pre></td></tr></table></figure>
 
 
+  </section>
 
-</div>
+</article>
 
 
 

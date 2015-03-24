@@ -158,57 +158,6 @@ Use dfs to traverse the whole vector. Build a visited two decimal vector to mark
   
     
     <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/03/23/Sudoku-Solver/" title="link to post.title">Sudoku Solver</a></h2>
-      <p class="excerpt">
-    
-      Thinking and Analysis:
-Use a interface to add a parameter. If not ‘.’, pass to next. If ‘.’, try 1~9.Judge 1~9 first and then go to next rec. Return true would keep gong on, if false, recover it. Until return results are all true.
-Codes:
-123456789101
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2015-03-24T03:10:39.000Z" class="post-list__meta--date date">Mar 23 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
-  <a class="-link" href="/tags/DFS/">DFS</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>
-</span><a class="btn-border-small" href="/2015/03/23/Sudoku-Solver/">Read More</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/03/23/Combination-Sum-II/" title="link to post.title">Combination Sum II</a></h2>
-      <p class="excerpt">
-    
-      Thinking and Analysis:
-As the problem allow user use unique number only once, in each rec step, the state should begin from next item.Almost same as Combination Sum.Runtime: 24 ms (Leetcode test)
-Codes:
-12345678910111213141516171819202122232425262728
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2015-03-24T02:41:57.000Z" class="post-list__meta--date date">Mar 23 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
-  <a class="-link" href="/tags/DFS/">DFS</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>
-</span><a class="btn-border-small" href="/2015/03/23/Combination-Sum-II/">Read More</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/03/23/Combination-Sum/" title="link to post.title">Combination Sum</a></h2>
-      <p class="excerpt">
-    
-      Thinking and Analysis:
-As the problem allow user use unlimited number of times, in each rec step, the state should begin from itself instead of next item.A good example for the DFS templete in my blog!Runtime: 20 ms (Leetcode test)
-Codes:
-12345678910
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2015-03-24T02:30:11.000Z" class="post-list__meta--date date">Mar 23 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
-  <a class="-link" href="/tags/DFS/">DFS</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>
-</span><a class="btn-border-small" href="/2015/03/23/Combination-Sum/">Read More</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
       <h2 class="post-list__post-title post-title"><a href="/2015/03/23/Restore-IP-Addresses/" title="link to post.title">Restore IP Addresses</a></h2>
       <p class="excerpt">
     
@@ -238,82 +187,8 @@ Data:one vector for columns occupied, one for main diagonal, one for anti diagon
     </li>
   
     
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/03/23/Unique-Paths-II/" title="link to post.title">Unique Paths II</a></h2>
-      <p class="excerpt">
-    
-      Thinking and Analysis:
-Memoization is a variant of Dynamic programming algorithm. Memoization also uses a table to hold the answer, and next time you simply view the answers to the sub-problems, without  recalculation.In this problem, use a two-decim
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2015-03-23T20:18:32.000Z" class="post-list__meta--date date">Mar 23 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
-  <a class="-link" href="/tags/DFS/">DFS</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/Memoization/">Memoization</a>
-</span><a class="btn-border-small" href="/2015/03/23/Unique-Paths-II/">Read More</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/03/23/Unique-Paths/" title="link to post.title">Unique Paths</a></h2>
-      <p class="excerpt">
-    
-      Thinking and Analysis:
-State transition equation is : f[i][j] = f[i-1][j] + f[i][j-1].f[1][j] means the number of ways from (1,1) to (i,j).T: O(n^2) S: O(n)Runtime: 4 ms (Leetcode test)
-Codes:
-12345678910111213class Solution {public:    int uniquePat
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2015-03-23T19:43:37.000Z" class="post-list__meta--date date">Mar 23 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
-  <a class="-link" href="/tags/Dynamic/">Dynamic</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>
-</span><a class="btn-border-small" href="/2015/03/23/Unique-Paths/">Read More</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/03/23/Palindrome-Partitioning/" title="link to post.title">Palindrome Partitioning</a></h2>
-      <p class="excerpt">
-    
-      Thinking and Analysis:
-Use dfs to traverse the array from every start charactors.All path -&amp;gt; vector&amp;gt; to store result, and use vector&amp;lt;&amp;gt; path to store every suitable substring -&amp;gt; start index is the key to extend the status -&amp;gt; no need 
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2015-03-23T19:30:23.000Z" class="post-list__meta--date date">Mar 23 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
-  <a class="-link" href="/tags/DFS/">DFS</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/Rec/">Rec</a>
-</span><a class="btn-border-small" href="/2015/03/23/Palindrome-Partitioning/">Read More</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/03/23/Things-about-DFS/" title="link to post.title">Things about DFS</a></h2>
-      <p class="excerpt">
-    
-      Application:
-Input Data:Linked list, binary tree, set and array which use recursion.Objective:Get one solution only by stepping into the deepest.
-How to solve?
-Step 1Path:
-
-number of path : don’t need to store the path
-path detail : if need only one 
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2015-03-23T18:23:25.000Z" class="post-list__meta--date date">Mar 23 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
-  <a class="-link" href="/tags/DFS/">DFS</a>, <a class="-link" href="/tags/Solution/">Solution</a>
-</span><a class="btn-border-small" href="/2015/03/23/Things-about-DFS/">Read More</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
   </ol>
 
-
-  <nav class="pagination" role="navigation">
-    
-    
-      <a class="older-posts pagination__older btn btn-small btn-tertiary" href="/categories/Prep/page/2/">Next</a>
-    
-  </nav>
 
 
 </div>
