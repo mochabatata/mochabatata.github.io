@@ -143,164 +143,167 @@
   
     
     <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/03/23/Word-Search/" title="link to post.title">Word Search</a></h2>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/26/Climbing-Stairs/" title="link to post.title">Climbing Stairs</a></h2>
       <p class="excerpt">
     
       Thinking and Analysis:
-Use dfs to traverse the whole vector. Build a visited two decimal vector to mark the visited element for pruning. This problem is not required to return path, so no need to build path[]. Convergence when reach word.size(). All 
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2015-03-24T03:24:28.000Z" class="post-list__meta--date date">Mar 23 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
-  <a class="-link" href="/tags/DFS/">DFS</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/Pruning/">Pruning</a>
-</span><a class="btn-border-small" href="/2015/03/23/Word-Search/">Read More</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/03/23/Sudoku-Solver/" title="link to post.title">Sudoku Solver</a></h2>
-      <p class="excerpt">
-    
-      Thinking and Analysis:
-Use a interface to add a parameter. If not ‘.’, pass to next. If ‘.’, try 1~9.Judge 1~9 first and then go to next rec. Return true would keep gong on, if false, recover it. Until return results are all true.
+For each step i, the number of ways is step[i-1]+step[i-2].So it is a Fabonacci sequence. The sequence is like (0,1,)1,2,3,5,8….Runtime: 4 ms (Leetcode test)
 Codes:
-123456789101
+12345678910111213class Solution {public:    int climbStairs(in
     &hellip;
       </p>
-      <div class="post-list__meta"><time datetime="2015-03-24T03:10:39.000Z" class="post-list__meta--date date">Mar 23 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
-  <a class="-link" href="/tags/DFS/">DFS</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>
-</span><a class="btn-border-small" href="/2015/03/23/Sudoku-Solver/">Read More</a></div>
+      <div class="post-list__meta"><time datetime="2015-03-26T19:10:29.000Z" class="post-list__meta--date date">Mar 26 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/Array/">Array</a>, <a class="-link" href="/tags/Dynamic-Programming/">Dynamic Programming</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>
+</span><a class="btn-border-small" href="/2015/03/26/Climbing-Stairs/">Read More</a></div>
       <hr class="post-list__divider" />
     </li>
   
     
     <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/03/23/Combination-Sum-II/" title="link to post.title">Combination Sum II</a></h2>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/26/Plus-One/" title="link to post.title">Plus One</a></h2>
       <p class="excerpt">
     
       Thinking and Analysis:
-As the problem allow user use unique number only once, in each rec step, the state should begin from next item.Almost same as Combination Sum.Runtime: 24 ms (Leetcode test)
+Follow the basic math plus rule, and use a carry variable for carry.Runtime: 5 ms (Leetcode test)
 Codes:
-12345678910111213141516171819202122232425262728
+123456789101112131415class Solution {public:    vector&amp;lt;int&amp;gt; plusOne(vector&amp;lt;int&amp;gt; &amp;digits) {        int carry = 
     &hellip;
       </p>
-      <div class="post-list__meta"><time datetime="2015-03-24T02:41:57.000Z" class="post-list__meta--date date">Mar 23 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
-  <a class="-link" href="/tags/DFS/">DFS</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>
-</span><a class="btn-border-small" href="/2015/03/23/Combination-Sum-II/">Read More</a></div>
+      <div class="post-list__meta"><time datetime="2015-03-26T19:06:04.000Z" class="post-list__meta--date date">Mar 26 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/Array/">Array</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>
+</span><a class="btn-border-small" href="/2015/03/26/Plus-One/">Read More</a></div>
       <hr class="post-list__divider" />
     </li>
   
     
     <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/03/23/Combination-Sum/" title="link to post.title">Combination Sum</a></h2>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/26/Rotate-Image/" title="link to post.title">Rotate Image</a></h2>
       <p class="excerpt">
     
       Thinking and Analysis:
-As the problem allow user use unlimited number of times, in each rec step, the state should begin from itself instead of next item.A good example for the DFS templete in my blog!Runtime: 20 ms (Leetcode test)
+Swap all corresponding elements based on counter-diagonal;Swap all corresponding elements based on central horizontal line;
+Runtime: 15 ms (Leetcode test)
 Codes:
-12345678910
+123456789101112class Solution {public:    void rotate(vector&amp;lt;v
     &hellip;
       </p>
-      <div class="post-list__meta"><time datetime="2015-03-24T02:30:11.000Z" class="post-list__meta--date date">Mar 23 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
-  <a class="-link" href="/tags/DFS/">DFS</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>
-</span><a class="btn-border-small" href="/2015/03/23/Combination-Sum/">Read More</a></div>
+      <div class="post-list__meta"><time datetime="2015-03-26T18:58:44.000Z" class="post-list__meta--date date">Mar 26 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/Array/">Array</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>
+</span><a class="btn-border-small" href="/2015/03/26/Rotate-Image/">Read More</a></div>
       <hr class="post-list__divider" />
     </li>
   
     
     <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/03/23/Restore-IP-Addresses/" title="link to post.title">Restore IP Addresses</a></h2>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/26/Trapping-Rain-Water/" title="link to post.title">Trapping Rain Water</a></h2>
       <p class="excerpt">
     
       Thinking and Analysis:
-IP address:Four parts, and every part should less than 256. In addition, every part avoid exist ‘010’ that ‘0’ at the beginning.string ip act as path; all state &amp;lt; 256 should be rec to next; Key point of this problem is how t
+Solution 1:Using Two Pointers. Find the max height in the array, and partition the array here.In left, build a peak as left tmp height bar. If next element &amp;gt;= peak, set as new peak; else, there would be some water left, add 
     &hellip;
       </p>
-      <div class="post-list__meta"><time datetime="2015-03-24T02:01:20.000Z" class="post-list__meta--date date">Mar 23 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
-  <a class="-link" href="/tags/DFS/">DFS</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/Pruning/">Pruning</a>
-</span><a class="btn-border-small" href="/2015/03/23/Restore-IP-Addresses/">Read More</a></div>
+      <div class="post-list__meta"><time datetime="2015-03-26T18:50:33.000Z" class="post-list__meta--date date">Mar 26 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/Array/">Array</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/Stack/">Stack</a>, <a class="-link" href="/tags/Two-Pointers/">Two Pointers</a>
+</span><a class="btn-border-small" href="/2015/03/26/Trapping-Rain-Water/">Read More</a></div>
       <hr class="post-list__divider" />
     </li>
   
     
     <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/03/23/N-Queens/" title="link to post.title">N-Queens I &amp; II</a></h2>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/26/Valid-Sudoku/" title="link to post.title">Valid Sudoku</a></h2>
       <p class="excerpt">
     
       Thinking and Analysis:
-Data:one vector for columns occupied, one for main diagonal, one for anti diagonal, one vector like  path(in this problem is C(n,0), C[i] means column index at row i).Convergence: traverse all rows and in each row mark the Q.Pr
+Like hashtable, I use three 99 two demical vector to indicate the number appear or not.One for row, one for colum, and the other for 33;Travese the input, and for each element not ‘.’ check the three vector.If exist, return fal
     &hellip;
       </p>
-      <div class="post-list__meta"><time datetime="2015-03-24T00:53:29.000Z" class="post-list__meta--date date">Mar 23 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
-  <a class="-link" href="/tags/DFS/">DFS</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/Pruning/">Pruning</a>
-</span><a class="btn-border-small" href="/2015/03/23/N-Queens/">Read More</a></div>
+      <div class="post-list__meta"><time datetime="2015-03-26T18:34:06.000Z" class="post-list__meta--date date">Mar 26 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/HashTable/">HashTable</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>
+</span><a class="btn-border-small" href="/2015/03/26/Valid-Sudoku/">Read More</a></div>
       <hr class="post-list__divider" />
     </li>
   
     
     <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/03/23/Unique-Paths-II/" title="link to post.title">Unique Paths II</a></h2>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/26/Permutation-Sequence/" title="link to post.title">Permutation Sequence</a></h2>
       <p class="excerpt">
     
       Thinking and Analysis:
-Memoization is a variant of Dynamic programming algorithm. Memoization also uses a table to hold the answer, and next time you simply view the answers to the sub-problems, without  recalculation.In this problem, use a two-decim
+Solution 1:Loop k times by using Next Permutation.Solution 2:1 2 3 41 2 4 31 3 2 41 3 4 21 4 2 31 4 3 22 1 3 42 1 4 32 3 1 42 3 4 12 4 1 32 4 3 1…As the permution shown above, we can partition the whole sequence into several pa
     &hellip;
       </p>
-      <div class="post-list__meta"><time datetime="2015-03-23T20:18:32.000Z" class="post-list__meta--date date">Mar 23 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
-  <a class="-link" href="/tags/DFS/">DFS</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/Memoization/">Memoization</a>
-</span><a class="btn-border-small" href="/2015/03/23/Unique-Paths-II/">Read More</a></div>
+      <div class="post-list__meta"><time datetime="2015-03-26T18:21:44.000Z" class="post-list__meta--date date">Mar 26 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/Array/">Array</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/Math/">Math</a>
+</span><a class="btn-border-small" href="/2015/03/26/Permutation-Sequence/">Read More</a></div>
       <hr class="post-list__divider" />
     </li>
   
     
     <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/03/23/Unique-Paths/" title="link to post.title">Unique Paths</a></h2>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/26/Next-Permutation/" title="link to post.title">Next Permutation</a></h2>
       <p class="excerpt">
     
       Thinking and Analysis:
-State transition equation is : f[i][j] = f[i-1][j] + f[i][j-1].f[1][j] means the number of ways from (1,1) to (i,j).T: O(n^2) S: O(n)Runtime: 4 ms (Leetcode test)
-Codes:
-12345678910111213class Solution {public:    int uniquePat
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2015-03-23T19:43:37.000Z" class="post-list__meta--date date">Mar 23 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
-  <a class="-link" href="/tags/Dynamic/">Dynamic</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>
-</span><a class="btn-border-small" href="/2015/03/23/Unique-Paths/">Read More</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/03/23/Palindrome-Partitioning/" title="link to post.title">Palindrome Partitioning</a></h2>
-      <p class="excerpt">
-    
-      Thinking and Analysis:
-Use dfs to traverse the array from every start charactors.All path -&amp;gt; vector&amp;gt; to store result, and use vector&amp;lt;&amp;gt; path to store every suitable substring -&amp;gt; start index is the key to extend the status -&amp;gt; no need 
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2015-03-23T19:30:23.000Z" class="post-list__meta--date date">Mar 23 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
-  <a class="-link" href="/tags/DFS/">DFS</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/Rec/">Rec</a>
-</span><a class="btn-border-small" href="/2015/03/23/Palindrome-Partitioning/">Read More</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/03/23/Things-about-DFS/" title="link to post.title">Things about DFS</a></h2>
-      <p class="excerpt">
-    
-      Application:
-Input Data:Linked list, binary tree, set and array which use recursion.Objective:Get one solution only by stepping into the deepest.
-How to solve?
-Step 1Path:
+Permutation:1 2 3 41 2 4 31 3 2 41 3 4 21 4 2 31 4 3 22 1 3 42 1 4 32 3 1 42 3 4 12 4 1 32 4 3 1…
+Algorithm in this question is:
 
-number of path : don’t need to store the path
-path detail : if need only one 
+From right to left, find the first digit(PartitionNumber) which voilate the increase trend;
+From 
     &hellip;
       </p>
-      <div class="post-list__meta"><time datetime="2015-03-23T18:23:25.000Z" class="post-list__meta--date date">Mar 23 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
-  <a class="-link" href="/tags/DFS/">DFS</a>, <a class="-link" href="/tags/Solution/">Solution</a>
-</span><a class="btn-border-small" href="/2015/03/23/Things-about-DFS/">Read More</a></div>
+      <div class="post-list__meta"><time datetime="2015-03-26T18:12:00.000Z" class="post-list__meta--date date">Mar 26 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/Array/">Array</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>
+</span><a class="btn-border-small" href="/2015/03/26/Next-Permutation/">Read More</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/26/4Sum/" title="link to post.title">4Sum</a></h2>
+      <p class="excerpt">
+    
+      Thinking and Analysis:
+Use a hastable to store a every two numbers’ sum and its all possible pairs.Same as three sum, use two nested loop to match the gap with all sums in the hashtable.If matched, skip the all repeated elements and add them to resul
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2015-03-26T16:25:50.000Z" class="post-list__meta--date date">Mar 26 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/Array/">Array</a>, <a class="-link" href="/tags/HashTable/">HashTable</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/Two-Pointer/">Two Pointer</a>
+</span><a class="btn-border-small" href="/2015/03/26/4Sum/">Read More</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/26/Longest-Consecutive-Sequence/" title="link to post.title">Longest Consecutive Sequence</a></h2>
+      <p class="excerpt">
+    
+      Thinking and Analysis:
+Use a unordered_map to set all elements in num[] as false; loop from begin to end of num[], for each element, search the next and prev in the map, and update the length. For visited element,skip!Runtime: 27 ms (Leetcode test)
+C
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2015-03-26T16:14:21.000Z" class="post-list__meta--date date">Mar 26 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/Array/">Array</a>, <a class="-link" href="/tags/Hashtable/">Hashtable</a>
+</span><a class="btn-border-small" href="/2015/03/26/Longest-Consecutive-Sequence/">Read More</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/26/Median-of-Two-Sorted-Arrays/" title="link to post.title">Median of Two Sorted Arrays</a></h2>
+      <p class="excerpt">
+    
+      Thinking and Analysis:
+Extend to find kth of Two Sorted ArraysDivide two arrays from middle.Three situations: 
+
+A[k/2-1] == B[k/2-1] Find the element, return.
+A[k/2-1] &amp;lt; B[k/2-1] so the A[k/2-1] must be less than kth and delete A[0] ~ A[K/2-1]
+A[k
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2015-03-26T15:50:32.000Z" class="post-list__meta--date date">Mar 26 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/Array/">Array</a>, <a class="-link" href="/tags/Binary-Search/">Binary Search</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/Pruning/">Pruning</a>
+</span><a class="btn-border-small" href="/2015/03/26/Median-of-Two-Sorted-Arrays/">Read More</a></div>
       <hr class="post-list__divider" />
     </li>
   

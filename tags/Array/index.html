@@ -143,27 +143,180 @@
   
     
     <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/03/10/Pascals-Triangle-II/" title="link to post.title">Pascal&#39;s Triangle II</a></h2>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/26/Climbing-Stairs/" title="link to post.title">Climbing Stairs</a></h2>
       <p class="excerpt">
     
       Thinking and Analysis:
-Pascal’s Triangle: 
-123456    1   1 1  1 2 1 1 3 3 11 4 6 4 1...
-
-Each level is constructed based on its higher level.I use recursion to solve this from top to bottum of triangle.Runtime: 3 ms (Leetcode test)
+For each step i, the number of ways is step[i-1]+step[i-2].So it is a Fabonacci sequence. The sequence is like (0,1,)1,2,3,5,8….Runtime: 4 ms (Leetcode test)
 Codes:
-12345678910
+12345678910111213class Solution {public:    int climbStairs(in
     &hellip;
       </p>
-      <div class="post-list__meta"><time datetime="2015-03-10T21:44:29.000Z" class="post-list__meta--date date">Mar 10 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
-  <a class="-link" href="/tags/Array/">Array</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/Rec/">Rec</a>
-</span><a class="btn-border-small" href="/2015/03/10/Pascals-Triangle-II/">Read More</a></div>
+      <div class="post-list__meta"><time datetime="2015-03-26T19:10:29.000Z" class="post-list__meta--date date">Mar 26 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/Array/">Array</a>, <a class="-link" href="/tags/Dynamic-Programming/">Dynamic Programming</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>
+</span><a class="btn-border-small" href="/2015/03/26/Climbing-Stairs/">Read More</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/26/Plus-One/" title="link to post.title">Plus One</a></h2>
+      <p class="excerpt">
+    
+      Thinking and Analysis:
+Follow the basic math plus rule, and use a carry variable for carry.Runtime: 5 ms (Leetcode test)
+Codes:
+123456789101112131415class Solution {public:    vector&amp;lt;int&amp;gt; plusOne(vector&amp;lt;int&amp;gt; &amp;digits) {        int carry = 
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2015-03-26T19:06:04.000Z" class="post-list__meta--date date">Mar 26 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/Array/">Array</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>
+</span><a class="btn-border-small" href="/2015/03/26/Plus-One/">Read More</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/26/Rotate-Image/" title="link to post.title">Rotate Image</a></h2>
+      <p class="excerpt">
+    
+      Thinking and Analysis:
+Swap all corresponding elements based on counter-diagonal;Swap all corresponding elements based on central horizontal line;
+Runtime: 15 ms (Leetcode test)
+Codes:
+123456789101112class Solution {public:    void rotate(vector&amp;lt;v
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2015-03-26T18:58:44.000Z" class="post-list__meta--date date">Mar 26 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/Array/">Array</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>
+</span><a class="btn-border-small" href="/2015/03/26/Rotate-Image/">Read More</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/26/Trapping-Rain-Water/" title="link to post.title">Trapping Rain Water</a></h2>
+      <p class="excerpt">
+    
+      Thinking and Analysis:
+Solution 1:Using Two Pointers. Find the max height in the array, and partition the array here.In left, build a peak as left tmp height bar. If next element &amp;gt;= peak, set as new peak; else, there would be some water left, add 
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2015-03-26T18:50:33.000Z" class="post-list__meta--date date">Mar 26 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/Array/">Array</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/Stack/">Stack</a>, <a class="-link" href="/tags/Two-Pointers/">Two Pointers</a>
+</span><a class="btn-border-small" href="/2015/03/26/Trapping-Rain-Water/">Read More</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/26/Permutation-Sequence/" title="link to post.title">Permutation Sequence</a></h2>
+      <p class="excerpt">
+    
+      Thinking and Analysis:
+Solution 1:Loop k times by using Next Permutation.Solution 2:1 2 3 41 2 4 31 3 2 41 3 4 21 4 2 31 4 3 22 1 3 42 1 4 32 3 1 42 3 4 12 4 1 32 4 3 1…As the permution shown above, we can partition the whole sequence into several pa
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2015-03-26T18:21:44.000Z" class="post-list__meta--date date">Mar 26 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/Array/">Array</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/Math/">Math</a>
+</span><a class="btn-border-small" href="/2015/03/26/Permutation-Sequence/">Read More</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/26/Next-Permutation/" title="link to post.title">Next Permutation</a></h2>
+      <p class="excerpt">
+    
+      Thinking and Analysis:
+Permutation:1 2 3 41 2 4 31 3 2 41 3 4 21 4 2 31 4 3 22 1 3 42 1 4 32 3 1 42 3 4 12 4 1 32 4 3 1…
+Algorithm in this question is:
+
+From right to left, find the first digit(PartitionNumber) which voilate the increase trend;
+From 
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2015-03-26T18:12:00.000Z" class="post-list__meta--date date">Mar 26 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/Array/">Array</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>
+</span><a class="btn-border-small" href="/2015/03/26/Next-Permutation/">Read More</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/26/4Sum/" title="link to post.title">4Sum</a></h2>
+      <p class="excerpt">
+    
+      Thinking and Analysis:
+Use a hastable to store a every two numbers’ sum and its all possible pairs.Same as three sum, use two nested loop to match the gap with all sums in the hashtable.If matched, skip the all repeated elements and add them to resul
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2015-03-26T16:25:50.000Z" class="post-list__meta--date date">Mar 26 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/Array/">Array</a>, <a class="-link" href="/tags/HashTable/">HashTable</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/Two-Pointer/">Two Pointer</a>
+</span><a class="btn-border-small" href="/2015/03/26/4Sum/">Read More</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/26/Longest-Consecutive-Sequence/" title="link to post.title">Longest Consecutive Sequence</a></h2>
+      <p class="excerpt">
+    
+      Thinking and Analysis:
+Use a unordered_map to set all elements in num[] as false; loop from begin to end of num[], for each element, search the next and prev in the map, and update the length. For visited element,skip!Runtime: 27 ms (Leetcode test)
+C
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2015-03-26T16:14:21.000Z" class="post-list__meta--date date">Mar 26 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/Array/">Array</a>, <a class="-link" href="/tags/Hashtable/">Hashtable</a>
+</span><a class="btn-border-small" href="/2015/03/26/Longest-Consecutive-Sequence/">Read More</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/26/Median-of-Two-Sorted-Arrays/" title="link to post.title">Median of Two Sorted Arrays</a></h2>
+      <p class="excerpt">
+    
+      Thinking and Analysis:
+Extend to find kth of Two Sorted ArraysDivide two arrays from middle.Three situations: 
+
+A[k/2-1] == B[k/2-1] Find the element, return.
+A[k/2-1] &amp;lt; B[k/2-1] so the A[k/2-1] must be less than kth and delete A[0] ~ A[K/2-1]
+A[k
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2015-03-26T15:50:32.000Z" class="post-list__meta--date date">Mar 26 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/Array/">Array</a>, <a class="-link" href="/tags/Binary-Search/">Binary Search</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/Pruning/">Pruning</a>
+</span><a class="btn-border-small" href="/2015/03/26/Median-of-Two-Sorted-Arrays/">Read More</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/26/Search-in-Rotated-Sorted-Array/" title="link to post.title">Search in Rotated Sorted Array I &amp; II</a></h2>
+      <p class="excerpt">
+    
+      Thinking and Analysis:
+I:Let us name the point that largest point connected smallest point as ‘break point’. If the break point appears in first half, the second half would be monotonically increasing(s1) and vice versa(s2).II:The break point maybe a
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2015-03-26T15:29:01.000Z" class="post-list__meta--date date">Mar 26 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/Array/">Array</a>, <a class="-link" href="/tags/Binary-Search/">Binary Search</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>
+</span><a class="btn-border-small" href="/2015/03/26/Search-in-Rotated-Sorted-Array/">Read More</a></div>
       <hr class="post-list__divider" />
     </li>
   
     
   </ol>
 
+
+  <nav class="pagination" role="navigation">
+    
+    
+      <a class="older-posts pagination__older btn btn-small btn-tertiary" href="/tags/Array/page/2/">Next</a>
+    
+  </nav>
 
 
 </div>

@@ -143,151 +143,162 @@
   
     
     <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/03/18/Single-Number/" title="link to post.title">Single Number</a></h2>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/26/Remove-Duplicates-from-Sorted-Array-II/" title="link to post.title">Remove Duplicates from Sorted Array II</a></h2>
       <p class="excerpt">
     
       Thinking and Analysis:
-XOR:010^100=110  10101^00000=10101As the example shown above, every two same numbers XOR =&amp;gt; 0, and any number XOR 0 is itself.
+Solution 1Same as ‘I’, use two pointers, one for traversing the array duplication judgement, one for assign element to the result. In addition, use a bool flag to mark the second duplicated element.Solution 2Determine A[n] == A
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2015-03-26T14:50:18.000Z" class="post-list__meta--date date">Mar 26 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/Array/">Array</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/Two-Pointers/">Two Pointers</a>
+</span><a class="btn-border-small" href="/2015/03/26/Remove-Duplicates-from-Sorted-Array-II/">Read More</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/26/Remove-Duplicates-from-Sorted-Array/" title="link to post.title">Remove Duplicates from Sorted Array</a></h2>
+      <p class="excerpt">
+    
+      Thinking and Analysis:
+Use two pointers, one for traversing the array duplication judgement, one for assign element to the result. 
+Runtime: 39 ms (Leetcode test)
 Codes:
-123456789class Solution {public:    int singleNumber(int A[], int n) {        int x = 0;  
+12345678910111213141516class Solution {public:    int removeDuplicates(int A[], 
     &hellip;
       </p>
-      <div class="post-list__meta"><time datetime="2015-03-18T22:12:45.000Z" class="post-list__meta--date date">Mar 18 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
-  <a class="-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>
-</span><a class="btn-border-small" href="/2015/03/18/Single-Number/">Read More</a></div>
+      <div class="post-list__meta"><time datetime="2015-03-26T14:42:45.000Z" class="post-list__meta--date date">Mar 26 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/Array/">Array</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/Two-Pointers/">Two Pointers</a>
+</span><a class="btn-border-small" href="/2015/03/26/Remove-Duplicates-from-Sorted-Array/">Read More</a></div>
       <hr class="post-list__divider" />
     </li>
   
     
     <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/03/18/Single-Number-II/" title="link to post.title">Single Number II</a></h2>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/26/Tips-before-Leetcode/" title="link to post.title">Tips before Leetcode</a></h2>
+      <p class="excerpt">
+    
+      Tip 1:
+Determine two float a and b equal or not. Do not use a==b, and what you should do is determining whether fabs(a-b) is less than some threshold or not, eg 1e^-9.
+Tip 2:
+Determine a integer is odd or not. Do not use x%2==1, because an integer ma
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2015-03-26T14:19:01.000Z" class="post-list__meta--date date">Mar 26 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/Solution/">Solution</a>
+</span><a class="btn-border-small" href="/2015/03/26/Tips-before-Leetcode/">Read More</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/23/Word-Search/" title="link to post.title">Word Search</a></h2>
       <p class="excerpt">
     
       Thinking and Analysis:
-Partition the number into a 32 bits array. Count the “1” numbers and num%3, if get 0 then keep 0, if get 1 then keep 1 at that position.Runtime: 10 ms (Leetcode test)
+Use dfs to traverse the whole vector. Build a visited two decimal vector to mark the visited element for pruning. This problem is not required to return path, so no need to build path[]. Convergence when reach word.size(). All 
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2015-03-24T03:24:28.000Z" class="post-list__meta--date date">Mar 23 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/DFS/">DFS</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/Pruning/">Pruning</a>
+</span><a class="btn-border-small" href="/2015/03/23/Word-Search/">Read More</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/23/Sudoku-Solver/" title="link to post.title">Sudoku Solver</a></h2>
+      <p class="excerpt">
+    
+      Thinking and Analysis:
+Use a interface to add a parameter. If not ‘.’, pass to next. If ‘.’, try 1~9.Judge 1~9 first and then go to next rec. Return true would keep gong on, if false, recover it. Until return results are all true.
 Codes:
-1234567891011121314151617181920class Solution {public
+123456789101
     &hellip;
       </p>
-      <div class="post-list__meta"><time datetime="2015-03-18T21:37:16.000Z" class="post-list__meta--date date">Mar 18 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
-  <a class="-link" href="/tags/Bit-Manipulation/">Bit Manipulation</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>
-</span><a class="btn-border-small" href="/2015/03/18/Single-Number-II/">Read More</a></div>
+      <div class="post-list__meta"><time datetime="2015-03-24T03:10:39.000Z" class="post-list__meta--date date">Mar 23 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/DFS/">DFS</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>
+</span><a class="btn-border-small" href="/2015/03/23/Sudoku-Solver/">Read More</a></div>
       <hr class="post-list__divider" />
     </li>
   
     
     <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/03/18/Longest-Substring-Without-Repeating-Characters/" title="link to post.title">Longest Substring Without Repeating Characters</a></h2>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/23/Combination-Sum-II/" title="link to post.title">Combination Sum II</a></h2>
       <p class="excerpt">
     
       Thinking and Analysis:
-ASCII includes definitions for 128 characters: 33 are non-printing control characters (many now obsolete) that affect how text and space are processed and 95 printable characters, including the space (which is considered an inv
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2015-03-18T18:52:07.000Z" class="post-list__meta--date date">Mar 18 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
-  <a class="-link" href="/tags/Greedy/">Greedy</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/String/">String</a>
-</span><a class="btn-border-small" href="/2015/03/18/Longest-Substring-Without-Repeating-Characters/">Read More</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/03/18/Count-and-Say/" title="link to post.title">Count and Say</a></h2>
-      <p class="excerpt">
-    
-      Thinking and Analysis:
-The count-and-say sequence:1 -&amp;gt; 11 -&amp;gt; 21 -&amp;gt; 1211 -&amp;gt; 111221 …Count the same digit in the sequence and append the digit itself.Runtime: 4 ms (Leetcode test)
+As the problem allow user use unique number only once, in each rec step, the state should begin from next item.Almost same as Combination Sum.Runtime: 24 ms (Leetcode test)
 Codes:
-1234567891011121314151617181920212223class Solution {
+12345678910111213141516171819202122232425262728
     &hellip;
       </p>
-      <div class="post-list__meta"><time datetime="2015-03-18T18:26:52.000Z" class="post-list__meta--date date">Mar 18 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
-  <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/String/">String</a>
-</span><a class="btn-border-small" href="/2015/03/18/Count-and-Say/">Read More</a></div>
+      <div class="post-list__meta"><time datetime="2015-03-24T02:41:57.000Z" class="post-list__meta--date date">Mar 23 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/DFS/">DFS</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>
+</span><a class="btn-border-small" href="/2015/03/23/Combination-Sum-II/">Read More</a></div>
       <hr class="post-list__divider" />
     </li>
   
     
     <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/03/18/Length-of-Last-Word/" title="link to post.title">Length of Last Word</a></h2>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/23/Combination-Sum/" title="link to post.title">Combination Sum</a></h2>
       <p class="excerpt">
     
       Thinking and Analysis:
-Loop from tail to head. Set a bool flag to indicate whether meet “ “ or not.Runtime: 6 ms (Leetcode test)
-Codes:
-1234567891011121314151617class Solution {public:    int lengthOfLastWord(const char *s) {        int num = 0;     
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2015-03-18T17:50:41.000Z" class="post-list__meta--date date">Mar 18 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
-  <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/String/">String</a>
-</span><a class="btn-border-small" href="/2015/03/18/Length-of-Last-Word/">Read More</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/03/18/Longest-Common-Prefix/" title="link to post.title">Longest Common Prefix</a></h2>
-      <p class="excerpt">
-    
-      Thinking and Analysis:
-Example:“abcde”, “abced”, “abddd”=&amp;gt; “ab”
-Use the first string in the vector sa a sample to compare the others from the first character until show false(There is a bool flag to show when to jump out of loop).Runtime: 23 ms (L
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2015-03-18T05:14:21.000Z" class="post-list__meta--date date">Mar 18 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
-  <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/String/">String</a>
-</span><a class="btn-border-small" href="/2015/03/18/Longest-Common-Prefix/">Read More</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/03/18/Roman-to-Integer/" title="link to post.title">Roman to Integer</a></h2>
-      <p class="excerpt">
-    
-      Thinking and Analysis:
-The key point of the question is how to calculate the Roman character:If a small character appears in front of a big one, the bog one minus the small one.If a small character appears behind of a big one, the bog one plus the sm
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2015-03-18T04:33:59.000Z" class="post-list__meta--date date">Mar 18 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
-  <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/Math/">Math</a>, <a class="-link" href="/tags/String/">String</a>
-</span><a class="btn-border-small" href="/2015/03/18/Roman-to-Integer/">Read More</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/03/17/ZigZag-Conversion/" title="link to post.title">ZigZag Conversion</a></h2>
-      <p class="excerpt">
-    
-      Thinking and Analysis:
-List some cases to find out the rules:
-12345678910111213141516171819nRows = **2** :    1   3    2   4nRows = **3** :    1       5       9    2   4   6   8   10    3       7       11nRows = **4** :    1           7           13 
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2015-03-18T03:36:15.000Z" class="post-list__meta--date date">Mar 17 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
-  <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/String/">String</a>
-</span><a class="btn-border-small" href="/2015/03/17/ZigZag-Conversion/">Read More</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/03/10/Pascals-Triangle-II/" title="link to post.title">Pascal&#39;s Triangle II</a></h2>
-      <p class="excerpt">
-    
-      Thinking and Analysis:
-Pascal’s Triangle: 
-123456    1   1 1  1 2 1 1 3 3 11 4 6 4 1...
-
-Each level is constructed based on its higher level.I use recursion to solve this from top to bottum of triangle.Runtime: 3 ms (Leetcode test)
+As the problem allow user use unlimited number of times, in each rec step, the state should begin from itself instead of next item.A good example for the DFS templete in my blog!Runtime: 20 ms (Leetcode test)
 Codes:
 12345678910
     &hellip;
       </p>
-      <div class="post-list__meta"><time datetime="2015-03-10T21:44:29.000Z" class="post-list__meta--date date">Mar 10 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
-  <a class="-link" href="/tags/Array/">Array</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/Rec/">Rec</a>
-</span><a class="btn-border-small" href="/2015/03/10/Pascals-Triangle-II/">Read More</a></div>
+      <div class="post-list__meta"><time datetime="2015-03-24T02:30:11.000Z" class="post-list__meta--date date">Mar 23 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/DFS/">DFS</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>
+</span><a class="btn-border-small" href="/2015/03/23/Combination-Sum/">Read More</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/23/Restore-IP-Addresses/" title="link to post.title">Restore IP Addresses</a></h2>
+      <p class="excerpt">
+    
+      Thinking and Analysis:
+IP address:Four parts, and every part should less than 256. In addition, every part avoid exist ‘010’ that ‘0’ at the beginning.string ip act as path; all state &amp;lt; 256 should be rec to next; Key point of this problem is how t
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2015-03-24T02:01:20.000Z" class="post-list__meta--date date">Mar 23 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/DFS/">DFS</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/Pruning/">Pruning</a>
+</span><a class="btn-border-small" href="/2015/03/23/Restore-IP-Addresses/">Read More</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/23/N-Queens/" title="link to post.title">N-Queens I &amp; II</a></h2>
+      <p class="excerpt">
+    
+      Thinking and Analysis:
+Data:one vector for columns occupied, one for main diagonal, one for anti diagonal, one vector like  path(in this problem is C(n,0), C[i] means column index at row i).Convergence: traverse all rows and in each row mark the Q.Pr
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2015-03-24T00:53:29.000Z" class="post-list__meta--date date">Mar 23 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/DFS/">DFS</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/Pruning/">Pruning</a>
+</span><a class="btn-border-small" href="/2015/03/23/N-Queens/">Read More</a></div>
+      <hr class="post-list__divider" />
+    </li>
+  
+    
+    <li>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/23/Unique-Paths-II/" title="link to post.title">Unique Paths II</a></h2>
+      <p class="excerpt">
+    
+      Thinking and Analysis:
+Memoization is a variant of Dynamic programming algorithm. Memoization also uses a table to hold the answer, and next time you simply view the answers to the sub-problems, without  recalculation.In this problem, use a two-decim
+    &hellip;
+      </p>
+      <div class="post-list__meta"><time datetime="2015-03-23T20:18:32.000Z" class="post-list__meta--date date">Mar 23 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/DFS/">DFS</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/Memoization/">Memoization</a>
+</span><a class="btn-border-small" href="/2015/03/23/Unique-Paths-II/">Read More</a></div>
       <hr class="post-list__divider" />
     </li>
   
@@ -299,6 +310,8 @@ Codes:
     
       <a class="older-posts pagination__older btn btn-small btn-tertiary" href="/#blog">Prev</a>
     
+    
+      <a class="older-posts pagination__older btn btn-small btn-tertiary" href="/tags/Leetcode/page/3/">Next</a>
     
   </nav>
 
