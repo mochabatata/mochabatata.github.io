@@ -143,48 +143,17 @@
   
     
     <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/03/26/Valid-Sudoku/" title="link to post.title">Valid Sudoku</a></h2>
+      <h2 class="post-list__post-title post-title"><a href="/2015/03/26/Longest-Consecutive-Sequence/" title="link to post.title">Longest Consecutive Sequence</a></h2>
       <p class="excerpt">
     
       Thinking and Analysis:
-Like hashtable, I use three 99 two demical vector to indicate the number appear or not.One for row, one for colum, and the other for 33;Travese the input, and for each element not ‘.’ check the three vector.If exist, return fal
+Use a unordered_map to set all elements in num[] as false; loop from begin to end of num[], for each element, search the next and prev in the map, and update the length. For visited element,skip!Runtime: 27 ms (Leetcode test)
+C
     &hellip;
       </p>
-      <div class="post-list__meta"><time datetime="2015-03-26T18:34:06.000Z" class="post-list__meta--date date">Mar 26 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
-  <a class="-link" href="/tags/HashTable/">HashTable</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>
-</span><a class="btn-border-small" href="/2015/03/26/Valid-Sudoku/">Read More</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/03/26/4Sum/" title="link to post.title">4Sum</a></h2>
-      <p class="excerpt">
-    
-      Thinking and Analysis:
-Use a hastable to store a every two numbers’ sum and its all possible pairs.Same as three sum, use two nested loop to match the gap with all sums in the hashtable.If matched, skip the all repeated elements and add them to resul
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2015-03-26T16:25:50.000Z" class="post-list__meta--date date">Mar 26 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
-  <a class="-link" href="/tags/Array/">Array</a>, <a class="-link" href="/tags/HashTable/">HashTable</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/Two-Pointer/">Two Pointer</a>
-</span><a class="btn-border-small" href="/2015/03/26/4Sum/">Read More</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2015/03/18/Two-Sum/" title="link to post.title">Two Sum</a></h2>
-      <p class="excerpt">
-    
-      Thinking and Analysis:
-Solution1: Brute force, O(n^2)
-Solution2: Sort - O(nlogn)) and then use two pointers to let them move from head and tail to middle - O(n).
-Solution3: Hash. Using a map to store the vector’s value and let them equal to their ind
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2015-03-18T23:20:31.000Z" class="post-list__meta--date date">Mar 18 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
-  <a class="-link" href="/tags/HashTable/">HashTable</a>, <a class="-link" href="/tags/Leetcode/">Leetcode</a>, <a class="-link" href="/tags/Map/">Map</a>
-</span><a class="btn-border-small" href="/2015/03/18/Two-Sum/">Read More</a></div>
+      <div class="post-list__meta"><time datetime="2015-03-26T16:14:21.000Z" class="post-list__meta--date date">Mar 26 2015</time> &#8226; <span class="post-list__meta--tags tags">--&nbsp;
+  <a class="-link" href="/tags/Array/">Array</a>, <a class="-link" href="/tags/Hashtable/">Hashtable</a>
+</span><a class="btn-border-small" href="/2015/03/26/Longest-Consecutive-Sequence/">Read More</a></div>
       <hr class="post-list__divider" />
     </li>
   
